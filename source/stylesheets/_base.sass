@@ -1,0 +1,66 @@
+// Imports
+// --------------------------------------------------------------------
+
+@import "normalize"
+@import "compass/css3"
+@import "susy"
+
+
+// Fonts
+// --------------------------------------------------------------------
+
+$fontFamilySans  : Helvetica, sans-serif
+$fontFamilySerif : Baskerville, "Liberation Serif", Garamond, serif
+
+
+// Colors
+// --------------------------------------------------------------------
+
+$brand: turquoise
+$grey1: #d1d1d1
+
+
+// SUSY layout configuration
+// --------------------------------------------------------------------
+
+$full-width     : 1100px
+
+// $media-layout: <min-width> <layout> <max-width> <ie-fallback>
+$mobile-columns: 4
+$mobile: $mobile-columns 479px
+$tablet-columns: 7
+$tablet: 480px 7 1023px
+$desktop-columns: 12
+$desktop: 1024px 12
+
+$column-width   : 50px
+$gutter-width   : 50px
+$grid-padding   : 30px
+
+$container-style: magic
+$container-width: 1140px
+
++border-box-sizing
+
+
+// Mixins
+// --------------------------------------------------------------------
+
+// Show SUSY grid
+@mixin susy-grid
+  +at-breakpoint($mobile)
+    +susy-grid-background()
+
+  +at-breakpoint($tablet)
+    +susy-grid-background()
+
+  +at-breakpoint($desktop)
+    +susy-grid-background()
+
+// Text selection
+$prefixes: ("-webkit-","-moz-", "-o-", "")
+@mixin selection($color, $background)
+  @each $prefix in $prefixes
+    ::#{$prefix}selection
+      color: $color
+      background: $background

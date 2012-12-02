@@ -1,0 +1,13 @@
+Middleman:
+ ☐ Tidy
+ ☐ i18n
+ ✔ Selected menu items @done (12-12-02 03:03)
+ ☐ Code Highlight with rack/codehighlighter and pygments
+ ✔ CSS Layout max-width 1140px @done (12-12-02 03:03)
+ ✔ Font sizes for every layout @done (12-11-23 04:39)
+ ☐ <select> dropdown for mobile
+ ☐ Include font-face
+ ✔ Define sensible breakpoint defaults @done (12-12-02 03:03)
+ ☐ .pagenav tablet sideways
+ ☐ Different color schemes for different subpages
+ ☐ Copyright-Date?
