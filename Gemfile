@@ -1,21 +1,25 @@
 source :rubygems
 
-gem "middleman", "~>3.0.6"
+gem "middleman", "~>3.0"
 
-# Livereload
-gem "middleman-livereload", "~> 3.0.0"
+gem "middleman-livereload", "~> 3.0"
 
-# Faster ExecJS
-gem 'therubyracer'
-
-# Responsive grids for Compass
-gem "susy", "~> 1.0.4"
+gem "middleman-navigation"
 
 # Autogenerate Favicons + Apple-Touch-Icons
-# gem "middleman-favicon-maker"
+gem "middleman-favicon-maker"
+
+# Faster ExecJS
+gem 'therubyracer', "~> 0.11"
+
+# Responsive grids for Compass
+gem "susy", "~> 1.0"
 
 # Faster Markdown processing
-gem "redcarpet", "~> 2.2.2"
+gem "redcarpet", "~> 2.2"
 
-# Slim html
-gem "slim", "~> 1.3.4"
+# Normalize.css
+gem "compass-normalize", "~> 1.4"
+
+# Haml
+gem "haml", "~> 3.1"
