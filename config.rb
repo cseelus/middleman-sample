@@ -1,24 +1,14 @@
-###
-# Compass
-###
-
-# Susy grids in Compass
-# First: gem install susy --pre
-require 'susy'
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-###
 # Page options, layouts, aliases and proxies
-###
+# ---------------------------------------------------------------------------
+
+# Vars
+@project_name = 'hfuse'
+@base_url = 'http://www.hfuse.com/'
 
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
+page "/sitemap.xml", layout: false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
@@ -33,20 +23,38 @@ require 'susy'
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
 
-###
+
 # Helpers
-###
+# ---------------------------------------------------------------------------
 
 # Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
 helpers do
   def nav_active(page)
-    page_classes == page ? 'active' : ''
+    if page_classes == page
+      'active'
+    elsif page_classes.include? page
+      'semiactive'
+    else
+      ''
+    end
   end
 end
 
+
+# Compass
+# ---------------------------------------------------------------------------
+
+# Susy grids in Compass
+# First: gem install susy --pre
+require 'susy'
+
+# Change Compass configuration
+# compass_config do |config|
+#   config.output_style = :compact
+# end
 
 set :css_dir, 'stylesheets'
 
@@ -54,7 +62,9 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-# Build-specific configuration
+
+# Build specific
+# ---------------------------------------------------------------------------
 configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css
@@ -86,7 +96,11 @@ end
 # Livereload gem
 activate :livereload
 
-# Faster Markdown processing
+# middleman-navigation gem
+activate :navigation
+
+# Markdown processing
+set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true
 set :markdown_engine, :redcarpet
 
 # Slim html
