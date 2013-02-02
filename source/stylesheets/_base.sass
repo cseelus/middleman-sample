@@ -4,38 +4,43 @@
 @import "normalize"
 @import "compass/css3"
 @import "susy"
+@import "http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic"
 
 
 // Fonts
 // --------------------------------------------------------------------
 
-$fontFamilySans  : Helvetica, sans-serif
-$fontFamilySerif : Baskerville, "Liberation Serif", Garamond, serif
+$fontFamilySans:  Helvetica, sans-serif
+$fontFamilySerif: "Gentium Basic", serif
+$fontFamilyMono:  "Ubuntu Mono", monospace
 
 
 // Colors
 // --------------------------------------------------------------------
 
-$brand: turquoise
-$grey1: #d1d1d1
+$brand: darken(turquoise, 10)
+$text:  #444
+$grey1: #ede5d8
 
 
 // SUSY layout configuration
 // --------------------------------------------------------------------
+$mobile-columns:  4
+$tablet-columns:  7
+$desktop-columns: 12
 
-$full-width     : 1100px
+$mobile-size:  480px
+$tablet-size:  768px
+$desktop-size: 1140px
 
 // $media-layout: <min-width> <layout> <max-width> <ie-fallback>
-$mobile-columns: 4
-$mobile: $mobile-columns 479px
-$tablet-columns: 7
-$tablet: 480px 7 1023px
-$desktop-columns: 12
-$desktop: 1024px 12
+$mobile:  $mobile-columns ($tablet-size - 1)
+$tablet:  $tablet-size $tablet-columns ($desktop-size - 1)
+$desktop: $desktop-size $desktop-columns
 
-$column-width   : 50px
-$gutter-width   : 50px
-$grid-padding   : 30px
+$column-width: 50px
+$gutter-width: 50px
+$grid-padding: 20px
 
 $container-style: magic
 $container-width: 1140px
@@ -46,7 +51,7 @@ $container-width: 1140px
 // Mixins
 // --------------------------------------------------------------------
 
-// Show SUSY grid
+// SUSY grid
 @mixin susy-grid
   +at-breakpoint($mobile)
     +susy-grid-background()

@@ -1,13 +1,18 @@
 Middleman:
- ☐ Tidy
+ ✔ Tidy (only haml || slim) @done (12-12-03 00:31)
  ☐ i18n
  ✔ Selected menu items @done (12-12-02 03:03)
  ☐ Code Highlight with rack/codehighlighter and pygments
  ✔ CSS Layout max-width 1140px @done (12-12-02 03:03)
  ✔ Font sizes for every layout @done (12-11-23 04:39)
- ☐ <select> dropdown for mobile
- ☐ Include font-face
  ✔ Define sensible breakpoint defaults @done (12-12-02 03:03)
- ☐ .pagenav tablet sideways
+ ✔ .pagenav tablet sideways @done (12-12-02 21:58)
+ ☐ Include basic styles for forms, tables (split sass files?)
  ☐ Different color schemes for different subpages
+ ☐ index.html.slim -> index.html.md (aside auslagern)
  ☐ Copyright-Date?
+ ☐ Dynamic pagenav
+ ✔ <select> or fixed main nav @done (12-12-03 00:30)
+ ✔ google webfont (slim -> html?) @done (12-12-03 00:30)
+ ✔ Include font-face from Google @done (12-12-02 21:58)
+ ☐ Include icon font
