@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/michaek/middleman-navigation.git
+  revision: be94c7a8a317953cdb30a0eebf2e5d9bf1cc03f4
+  specs:
+    middleman-navigation (1.0.2)
+      middleman (> 3.0.0)
+      simple-navigation (> 3.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -71,9 +79,6 @@ GEM
       padrino-helpers (= 0.10.7)
       sass (>= 3.1.20)
       uglifier (~> 1.2.6)
-    middleman-navigation (1.0.2)
-      middleman (> 3.0.0)
-      simple-navigation (> 3.0.0)
     middleman-smusher (3.0.0)
       middleman (>= 3.0.0)
       smusher (~> 0.4.9)
@@ -144,6 +149,6 @@ DEPENDENCIES
   middleman (~> 3.0)
   middleman-favicon-maker
   middleman-livereload
-  middleman-navigation
+  middleman-navigation!
   middleman-smusher
   susy
