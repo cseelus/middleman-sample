@@ -84,7 +84,7 @@ configure :build do
   # Compress PNGs after build
   # First: gem install middleman-smusher
   # require "middleman-smusher"
-  # activate :smusher
+  activate :smusher
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
@@ -98,10 +98,6 @@ activate :livereload
 
 # middleman-navigation gem
 activate :navigation
-
-# Markdown processing
-set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true
-set :markdown_engine, :redcarpet
 
 # Slim html
 set :slim, pretty: true, sort_attrs: false, format: :html5
