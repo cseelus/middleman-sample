@@ -9,7 +9,7 @@
 
 .page
   +container
-  //+susy-grid // Enable or disable visible Susy grid
+  +susy-grid // Enable or disable visible Susy grid
 
 +at-breakpoint($mobile)
   .page
@@ -74,8 +74,9 @@ html
   color: $text
   font-family: $fontFamilySerif
   background: $grey1 image-url("background.jpg")
-  +selection(#fff, $brand)
   //+box-shadow(inset 0 0 250px rgba($brand, .1))
+
++selection(#fff, $brand)
 
 .banner
   #logo
@@ -232,7 +233,7 @@ a
       margin-right: 2em
       &:last-child
         margin-right: 0
-      a
+      a,
         color: $text
         font-size: 0.95em
         font-weight: bold
@@ -241,9 +242,8 @@ a
         text-decoration: none
         &:focus,
         &:hover,
-        &:active
-      &.active
-        a
+        &:active,
+        &.selected
           color: $brand
 
   +at-breakpoint($mobile)
@@ -279,9 +279,18 @@ a
     width: 100%
     margin: 20px 0
     td, th
+      text-align: left
       padding: 8px
     th
       font-size: .9em
       text-transform: uppercase
     td
       border-top: 1px solid $text
+
+
+// Page specific
+// --------------------------------------------------------------------
+html.index,
+html.home
+  .teaser
+    margin: 2.5em 0 -1em 0

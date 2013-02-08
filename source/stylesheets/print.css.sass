@@ -1,0 +1,21 @@
+// Hide screen elements
+// --------------------------------------------------------------------
+
+nav,
+footer
+  display: none
+
+
+// Print specific
+// --------------------------------------------------------------------
+
+// Print links
+.content
+  a:after
+    content: " [" attr(href) "] "
+
+p,
+ul,
+ol,
+dl
+  orphans: 3
