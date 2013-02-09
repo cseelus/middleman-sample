@@ -22,12 +22,12 @@
 
   <body>
     <div class="page">
-      <header class="banner">
+      <header class="banner" role="navigation">
         <h1 id="logo"><%= link_to 'hfuse', '/', title: 'Home' %></h1>
         <h2 class="slogan">We ☠ to create.</h2>
       </header>
 
-      <nav class="pagenav">
+      <nav class="pagenav" role="banner">
         <%= render_navigation %>
       </nav>
 
@@ -36,13 +36,13 @@
           <%= yield %>
         </div>
 
-        <aside class="summary">
+        <aside class="summary" role="note">
           <h3>Lorem ipsum</h3>
           <p>Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
         </aside>
       </article>
 
-      <footer class="contentinfo">
+      <footer class="contentinfo" role="contentinfo">
         <p class="logo"><span class="hfuse">hfuse</span></p>
         <p class="slogan">We ☠ to create.</p>
       </footer>
