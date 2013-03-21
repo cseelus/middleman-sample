@@ -12,6 +12,9 @@ gem 'middleman-smusher'
 # Autogenerate Favicons + Apple-Touch-Icons
 gem 'middleman-favicon-maker'
 
+# Nicely create structured (XML) markup
+gem 'builder'
+
 # Responsive grids for Compass
 gem 'susy'
 
