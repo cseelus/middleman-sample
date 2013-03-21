@@ -1,6 +1,6 @@
 # hfuse Base (for Middleman)
 
-Basic setup for [Middleman](https://github.com/middleman/) 3.x
+A basic setup for [Middleman](https://github.com/middleman/) 3.x
 
 ## Used gems
 
@@ -9,6 +9,7 @@ Basic setup for [Middleman](https://github.com/middleman/) 3.x
 - [middleman-navigation](https://rubygems.org/gems/middleman-navigation/)
 - [middleman-smusher](https://rubygems.org/gems/middleman-smusher/)
 - [middleman-favicon-maker](https://rubygems.org/gems/middleman-favicon-maker/)
+- [builder](http://rubygems.org/gems/builder/)
 - [susy](https://rubygems.org/gems/susy/)
 - [compass-normalize](https://rubygems.org/gems/compass-normalize/)
 
@@ -29,6 +30,6 @@ Ruby 1.9.3 or greater recommended
 
 `git clone` this repository and run `bundle install` inside the folder of this project.
 
-Use for whatever you like.
+Use for whatever you like. If you have suggestions for improvements use [Github issues of this project](https://github.com/cseelus/middleman-sample/issues/).
 
-Thanks to (Thomas Reynolds)[https://twitter.com/tdreyno], (Ben Hollis)[https://twitter.com/bhollis], et al.
+Thanks to [Thomas Reynolds](https://twitter.com/tdreyno), [Ben Hollis](https://twitter.com/bhollis), et al.
