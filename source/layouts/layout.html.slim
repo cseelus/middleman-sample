@@ -1,0 +1,38 @@
+doctype html
+html class="#{page_classes}" lang="en"
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta content="" name="description"
+    meta content="width=1024" name="viewport"
+
+    link href="#{image_path 'favicon.ico'}" rel="shortcut icon"
+    link href="#{image_path 'apple-touch-icon.png'}" rel="apple-touch-icon"
+
+    = stylesheet_link_tag 'all', media: 'all'
+    = stylesheet_link_tag 'print', media: 'print'
+
+  body
+    .page
+      header.banner role="navigation"
+        h1#logo= link_to 'hfuse', '/', title: 'Home'
+        h2.slogan To ∞ and beyond!
+
+      nav.pagenav role="banner"
+        = partial "partials/pagenav"
+
+      article.main role="main"
+        .content
+          = yield
+        aside.summary role="note"
+          h3 Lorem ipsum
+          p Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+
+      footer.contentinfo role="contentinfo"
+        p.logo
+          span.hfuse hfuse
+        p.slogan To ∞ and beyond!
+
+    = javascript_include_tag 'jquery.min'
+    = javascript_include_tag 'all'

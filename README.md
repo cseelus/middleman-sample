@@ -1,22 +1,19 @@
 # hfuse Base (for Middleman)
 
-A basic setup for [Middleman](https://github.com/middleman/) 3.x
+A basic setup for [Middleman](https://github.com/middleman/) 4.x
 
 ## Used gems
 
 - [middleman](https://rubygems.org/gems/middleman) (You didn't expect that, did you?)
 - [middleman-livereload](https://rubygems.org/gems/middleman-livereload/)
-- [middleman-navigation](https://rubygems.org/gems/middleman-navigation/)
-- [middleman-smusher](https://rubygems.org/gems/middleman-smusher/)
 - [middleman-favicon-maker](https://rubygems.org/gems/middleman-favicon-maker/)
 - [builder](http://rubygems.org/gems/builder/)
 - [susy](https://rubygems.org/gems/susy/)
-- [compass-normalize](https://rubygems.org/gems/compass-normalize/)
 
 
 ## Frontend
 
-Responsive, mobile first approach based on [Susy](http://susy.oddbird.net) and [Compass](http://compass-style.org/).
+Responsive, mobile first approach based on [Susy](http://susy.oddbird.net).
 
 Breakpoints are
 - phone: 480px - 768px
@@ -29,6 +26,8 @@ Breakpoints are
 Ruby 1.9.3 or greater recommended
 
 `git clone` this repository and run `bundle install` inside the folder of this project.
+
+Activate/deactivate Susy grid-overlay by commenting out/in `+susy-grid` for the `.page` CSS class.
 
 Use for whatever you like. If you have suggestions for improvements use [Github issues of this project](https://github.com/cseelus/middleman-sample/issues/).
 

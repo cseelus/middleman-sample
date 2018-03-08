@@ -1,9 +1,9 @@
 # Page options, layouts, aliases and proxies
-# ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------
 
 # Vars
-@project_name = 'hfuse'
-@base_url = 'http://www.hfuse.com/'
+set :site_title, 'hfuse'
+set :site_url, 'https://www.hfuse.com/'
 
 # Per-page layout changes:
 #
@@ -22,6 +22,9 @@ page "/sitemap.xml", layout: false
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
+
+# Livereload gem
+activate :livereload
 
 
 # Helpers
@@ -44,23 +47,19 @@ helpers do
 end
 
 
-# Compass
+# Frontend
 # ---------------------------------------------------------------------------
 
+
 # Susy grids in Compass
-# First: gem install susy --pre
 require 'susy'
 
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
+
+# Slim html
+set :slim, pretty: true, sort_attrs: false, format: :html
 
 
 # Build specific
@@ -92,12 +91,3 @@ configure :build do
   # Pretty URLs
   # activate :directory_indexes
 end
-
-# Livereload gem
-activate :livereload
-
-# middleman-navigation gem
-activate :navigation
-
-# Slim html
-set :slim, pretty: true, sort_attrs: false, format: :html5

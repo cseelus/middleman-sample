@@ -10,7 +10,7 @@
 .page
   +container
   min-width: 320px
-  +susy-grid // Enable or disable visible Susy grid
+  // +susy-grid // Enable or disable visible Susy grid
 
 +at-breakpoint($tablet)
   .page
@@ -196,13 +196,11 @@ a
   text-decoration: none
   margin: -2px -4px
   padding: 2px 4px
-  +transition(.4s all ease-out)
   &:focus,
   &:hover,
   &:active
     color: #fff!important
     background: $brand
-    +transition(.1s all ease-in)
 
 
 // Navigation
@@ -223,7 +221,10 @@ a
       margin-right: 2em
       &:last-child
         margin-right: 0
-      a,
+      &.active
+        a
+          color: $brand
+      a
         color: $text
         font-size: 0.95em
         font-weight: bold
